@@ -1,4 +1,4 @@
-import { SeriesOption } from 'echarts';
+import { EChartsOption, SeriesOption } from 'echarts';
 import { DatasetOption } from '.';
 import { XAxisOption, YAXisOption } from './axis';
 import { AxisPointerOption } from './axis-pointer';
@@ -10,15 +10,15 @@ import { TooltipOption } from './tooltip';
 import { VisualMapOption } from './visual-map';
 
 export type Config<T extends SeriesOption = SeriesOption> = {
-  dataset?: DatasetOption[];
-  title?: TitleOption[];
-  grid?: GridOption[];
-  xAxis?: XAxisOption[];
-  yAxis?: YAXisOption[];
-  tooltip?: TooltipOption[];
-  axisPointer?: AxisPointerOption[];
-  legend?: LegendOption[];
-  dataZoom?: DataZoomOption[];
-  visualMap?: VisualMapOption[];
-  series?: T[];
-};
+  dataset?: DatasetOption | DatasetOption[];
+  title?: TitleOption | TitleOption[];
+  grid?: GridOption | GridOption[];
+  xAxis?: XAxisOption | XAxisOption[];
+  yAxis?: YAXisOption | YAXisOption[];
+  tooltip?: TooltipOption | TooltipOption[];
+  axisPointer?: AxisPointerOption | AxisPointerOption[];
+  legend?: LegendOption | LegendOption[];
+  dataZoom?: DataZoomOption | DataZoomOption[];
+  visualMap?: VisualMapOption | VisualMapOption[];
+  series?: T | T[];
+} & Pick<EChartsOption, 'textStyle'>;

@@ -1,3 +1,5 @@
+import { Box } from '@mui/material';
+
 export const parameters = {
   layout: 'fullscreen',
   actions: { argTypesRegex: '^on[A-Z].*' },

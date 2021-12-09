@@ -1,9 +1,10 @@
 import { DatasetComponentOption } from 'echarts';
 
 export type DatasetOption = {
+  id?: string;
   source?: any[][];
   transform?: Transform | PipedTransform;
-} & Omit<DatasetComponentOption, 'source' | 'transform'>;
+} & Omit<DatasetComponentOption, 'id' | 'source' | 'transform'>;
 export type DataValue = string | number | boolean | Date;
 
 /*<-- START TRANSFORM -->*/
